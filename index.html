@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>jQuery.qrcode 0.18.0 Demo</title>
+        <meta name="description" content="Demo for jQuery.qrcode (https://larsjung.de/jquery-qrcode/)." />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link href="styles.css" rel="stylesheet" />
+        <link href="//fonts.googleapis.com/css2?family=Ubuntu+Mono:wght@400;700&amp;display=swap" rel="stylesheet" />
+        <script src="js/jquery.min.js"></script>
+        <script src="js/jquery-qrcode-0.18.0.js"></script>
+        <script src="js/scripts.js"></script>
+    </head>
+    <body>
+        <div id="container"></div>
+        <div class="control left">
+            <select id="render" style="display: none;">
+                <option selected="selected" value="image"></option>
+            </select>
+            <label for="size">Kích Thước:</label><input id="size" type="range" value="400" min="200" max="1000" step="50" /><label for="fill">Màu Code</label><input id="fill" type="color" value="#333333" /><label for="background">Màu Nền</label>
+            <input id="background" type="color" value="#ffffff" /><label for="text">Nội Dung</label><textarea id="text">nhập nội dung vào đây nè</textarea>
+            <hr />
+            <label for="minversion">Phiên Bản:</label><input id="minversion" type="range" value="6" min="1" max="10" step="1" /><label for="eclevel">Phiên Bản Phù Hợp</label>
+            <select id="eclevel">
+                <option value="L">L - Thấp (7%)</option>
+                <option value="M">M - Trung Bình (15%)</option>
+                <option value="H" selected="selected">H - Cao (30%)</option>
+            </select>
+            <label for="quiet">Viền:</label><input id="quiet" type="range" value="1" min="0" max="4" step="1" /><label for="radius">Bo Viền Code:</label><input id="radius" type="range" value="50" min="0" max="50" step="10" />
+        </div>
+        <div class="control right">
+            <label for="mode">Loại Logo</label>
+            <select id="mode">
+                <option value="0">1 - Không Logo</option>
+                <option value="2" selected="selected">2 - Có Logo Chữ</option>
+                <option value="4">3 - Có Logo Ảnh</option>
+            </select>
+            <hr />
+            <label for="msize">Kích Thước:</label><input id="msize" type="range" value="11" min="0" max="40" step="1" /><label for="mposx">Tọa Độ X:</label><input id="mposx" type="range" value="50" min="0" max="100" step="1" />
+            <label for="mposy">Tọa Độ Y:</label><input id="mposy" type="range" value="50" min="0" max="100" step="1" />
+            <hr />
+            <label for="label">Nội Dung Logo</label><input id="label" type="text" value="truongjae" /><input style="display: none;" id="font" type="text" value="Courier New" /><label for="fontcolor">Màu Logo</label>
+            <input id="fontcolor" type="color" value="#ff9818" />
+            <hr />
+            <label for="image">Chọn Logo Ảnh</label><input id="image" type="file" />
+        </div>
+        <img id="img-buffer" src="dummy.png" />
+    </body>
+</html>
